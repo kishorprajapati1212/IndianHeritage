@@ -33,9 +33,9 @@ const Attraction = lazy(() => import("../Component/New_Home_page/Attr"));
 const Home = () => {
   return (
     <>
-      <Suspense fallback={<div>Loading Slider...</div>}>
+{/*       <Suspense fallback={<div>Loading Slider...</div>}>
         <Slider />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<div>Loading States...</div>}>
         <State_Home />
