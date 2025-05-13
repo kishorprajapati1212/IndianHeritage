@@ -1,0 +1,14 @@
+.states-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 20px;  /* Add padding to prevent cards from touching screen edges */
+}
+
+@media (max-width: 600px) {
+  .states-grid {
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+}

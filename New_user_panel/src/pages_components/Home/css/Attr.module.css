@@ -1,0 +1,148 @@
+.Attr_container{
+  margin: 10px 0 ;
+  /* background-color: blanchedalmond; */
+  background-color:rgb(176,217,224);
+}
+
+.Attr_container .Attr_heading{
+  text-align: center;
+  /* font-size:100px;
+  font-family: 'Playfair Display', serif; */
+}
+
+.Attr_heading {
+  font-family: 'Poppins', sans-serif; /* Poppins for a modern, clean look */
+  font-size: 5rem; /* Make the heading larger */
+  font-weight: 800; /* Extra bold to match the font weight from the screenshot */
+  letter-spacing: -1px; /* Adjust spacing for a more compact look */
+  text-transform: uppercase; /* To give it the all-caps style */
+  color: #00A9FF; /* Bright blue for the heading text */
+  text-align: center;
+  margin: 30px 0;
+
+  /* Background image with a soft blur effect */
+  /* padding: 10px; */
+  border-radius: 12px; /* Rounded corners for a soft look */
+  position: relative;
+  overflow: hidden;
+}
+
+.Attr_heading::after {
+  content: " "; /* Decorative line */
+  display: block;
+  width: 150px;
+  height: 5px;
+  background-color: #00A9FF; /* Matching the text color */
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+
+.Attr_card{
+  height: 60vh;
+}
+
+.Attr_card_container {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  /* background-color: blue; */
+  display: flex; /* Enable flex layout */
+  flex-wrap: wrap; /* Allow wrapping for responsive design */
+  gap: 20px; /* Add spacing between cards */
+  justify-content: center; /* Center cards horizontally */
+  align-items: center; /* Align items to stretch vertically */
+  
+}
+
+.Attr_card {
+  color: white;
+  background-size: cover;
+  padding: 2rem; /* Adjust padding for a more flexible layout */
+  width: 300px; /* Set a consistent width for the cards */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 500ms ease, background-color 500ms ease;
+  cursor: pointer;
+  display: flex; /* Apply flex to card for inner alignment */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align content at the bottom */
+}
+
+.Attr_card:hover,
+.Attr_card:focus-within {
+  transform: scale(1.05);
+}
+
+.Attr_card_content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 0.5)
+  );
+  position: absolute;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.Attr_image_wrapper {
+  position: relative;
+  width: 115%;
+  height: 115%;
+  border-radius: 20%;
+}
+
+.Attr_card:hover .Attr_card_content,
+.Attr_card:focus-within .Attr_card_content {
+  transform: translateY(10%);
+  opacity: 1;
+}
+
+.Attr_card_content > * {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.Attr_card:hover .Attr_card_content > *,
+.Attr_card:focus-within .Attr_card_content > * {
+  opacity: 1;
+}
+
+.Attr_button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.Attr_button:hover,
+.Attr_button:focus {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+}
+
+
+
+@media (max-width: 768px) {
+  .Attr_card_container {
+    flex-wrap: wrap; /* Cards wrap to the next line */
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .Attr_card {
+    width: calc(50% - 10px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .Attr_card {
+    width: 100%; /* One card per row on small screens */
+  }
+}
