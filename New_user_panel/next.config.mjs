@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['swiperjs.com', 'raw.githubusercontent.com', 'example.com'], // add all domains you use
   },
-  // output: 'export',  
+  output: 'export',  
   // reactStrictMode: false,
 };
 
