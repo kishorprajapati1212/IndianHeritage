@@ -6,7 +6,6 @@ import styles from './css/States.module.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-import Image from 'next/image';
 
 
 export default function State_Home({ states }) {
@@ -52,7 +51,7 @@ export default function State_Home({ states }) {
                     className={`stateSlideContent ${activeIndex === index ? styles.active : ''
                       }`}
                   >
-                    <Image
+                    <img
                       loading="lazy"
                       src={
                         stateImages[state.state_name] ||
