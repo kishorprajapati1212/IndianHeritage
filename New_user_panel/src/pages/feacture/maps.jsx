@@ -1,5 +1,9 @@
 "use client";
-import Map from "../../pages_components/featcure_component/Map/Map";
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../../pages_components/featcure_component/Map/Map'), {
+  ssr: false,
+});
 
 const maps = () =>{
     return(
