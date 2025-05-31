@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-
+const API_URL = "API_URL";
+const API_KEY = "api_key"; 
 
 export const Chatboat = async({state, places, selectedBudget}) =>{
     console.log(places)
