@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
-const API_KEY = "AIzaSyAp0SBjQiCjbElOkki15xNqtDETiqKIhng"; // Your API key
+
 
 export const Chatboat = async({state, places, selectedBudget}) =>{
     console.log(places)
